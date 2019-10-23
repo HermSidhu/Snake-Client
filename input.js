@@ -16,7 +16,9 @@ const handleUserInput = function(data, conn) {
     if (data === "s")
       conn.write("Move: down");
     if (data === "d")
-      conn.write("Move: right");   
+      conn.write("Move: right");
+    if (data === "q")
+      conn.write("Say: ~~~~~~~~~~~~~~~~~~~~")   
 };
 
 module.exports = {
