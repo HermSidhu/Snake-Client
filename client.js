@@ -7,6 +7,10 @@ const connect = function() {
   conn.on('close', () => {
     console.log('You died cuz you idled');
   });
+  conn.on('connect', () => {
+    console.log('Successfully connected to the game server');
+  });
+  conn.write("Name: SNK")
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   return conn;
